@@ -21,7 +21,7 @@ Agent Pool은 **LangGraph(StateGraph) 기반 ReAct 에이전트**로, 사용자�
 ## ✨ 주요 기능 (Key Features)
 
 - **LangGraph(StateGraph) 기반 ReAct Agent** — Thought → Action → Observation → Final 흐름으로 멀티툴 라우팅
-- **멀티 도구 실행** — `web_search`(Serper), `doc_search`(내부 문서), `summarize`
+- **멀티 도구 실행** — `web_search`(Serper), `doc_search`(내부 문서), `summarize`(요약)
 - **출력 안정성 강화** — JSON 강제 대신 키워드 기반 ReAct 포맷 적용, 방어적 파싱 + Action 정규화로 라우팅 실패 최소화, 미지원 Action은 안전하게 FINAL fallback
 - **30B 모델 학습–병합–추론 아키텍처** — LoRA-SFT 학습 → `merge_and_unload()` → fp16 단일 모델 서빙, 런타임 LoRA attach 제거로 구조 단순화 및 운영 안정성 강화
 
